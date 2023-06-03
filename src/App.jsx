@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
-  const [count, setCount] = useState(1)
-
   return (
     <>
-      
+      <NavBar link1={'Más Vendidos'} link2={'Novedades'} link3={'Ver Todo'}/>
+      <ItemListContainer greeting={'Bienvenido a tu librería Online'} />
     </>
   )
 }

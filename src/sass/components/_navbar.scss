@@ -1,0 +1,147 @@
+.navbar {
+    background-color: $color-grey-dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 7.5%;
+    text-transform: uppercase;
+    position: relative;
+
+    &__brand {
+        width: 10rem;
+        cursor: pointer;
+
+        @include respond(tablet-port) {
+            width: 11rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    }
+
+    &__items {
+        display: none;
+
+        @include respond(tablet-port) {
+            display: flex;
+            gap: 2rem;
+            font-size: 1.1rem;
+        }
+
+        &.toggleMenu {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            padding: 1rem 2rem 1rem 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: $color-grey-dark;
+            text-align: right;
+
+            @include respond(phone-land) {
+                padding: 1rem 3rem 1rem 0;
+            }
+
+            @include respond(tablet-port) {
+                flex-direction: initial;
+                width: initial;
+                padding: initial;
+                position: initial;
+                top: initial;
+                left: initial;
+                text-align: initial;
+            }
+        }
+    }
+
+    &__link {
+        color: $color-grey-light;
+        transition: color .1s;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &--cart {
+            position: relative;
+
+            span {
+                position: absolute;
+                top: -13px;
+                left: -13px;
+                height: 1.4rem;
+                width: 1.4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-blue;
+                color: $color-white;
+                border: 1px solid $color-blue;
+                border-radius: 50%;
+                font-size: 1rem;
+                transition: all .2s;
+
+                @include respond(tablet-land) {
+                    top: -15px;
+                    left: -15px;
+                }
+            }
+
+            &:hover span {
+                top: -16px;
+
+                @include respond(tablet-land) {
+                    top: -18px;
+                }
+
+                @include respond(tablet-land) {
+                    top: -20px;
+                }
+            }
+        }
+    }
+}
+
+.hamburger {
+    //border: 1px solid $color-white;
+    width: 4rem;
+    height: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: relative;
+
+    @include respond(tablet-port) {
+        display: none;
+    }
+
+    &.toggleBtn &__line {
+        position: absolute;
+    }
+
+    &.toggleBtn &__line--1 {
+        transform: rotate(45deg);
+    }
+
+    &.toggleBtn &__line--2 {
+        opacity: 0;
+    }
+
+    &.toggleBtn &__line--3 {
+        transform: rotate(135deg);
+    }
+
+    &__line {
+        height: 2px;
+        width: 70%;
+        background-color: $color-grey-light;
+    }
+}
