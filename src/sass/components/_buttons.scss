@@ -1,0 +1,30 @@
+.btn {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    @include respond(phone-land) {
+        font-size: 1.4rem;
+    }
+
+    & > i {
+        color: $color-blue;
+        font-size: 2rem;
+    }
+
+    &__solid {
+        background-color: $color-blue;
+        color: $color-white;
+        display: inline-block;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        width: 100%;
+        transition: background-color .2s;
+
+        &:hover {
+            background-color: darken($color-blue, 10%);
+        }
+    }
+}
