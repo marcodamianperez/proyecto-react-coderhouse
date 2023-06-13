@@ -1,0 +1,21 @@
+.cards-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(phone-land) {
+        gap: 1.4rem;
+    }
+
+    @include respond(tablet-port) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include respond(tablet-land) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include respond(desktop) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}

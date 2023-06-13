@@ -26,5 +26,15 @@
         &:hover {
             background-color: darken($color-blue, 10%);
         }
+
+        &--small {
+            padding: .7rem 1rem;
+            font-size: 1rem;
+            letter-spacing: normal;
+
+            @include respond(phone-land) {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
