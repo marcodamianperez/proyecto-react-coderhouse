@@ -15,4 +15,5 @@ Booklify es una ecommerce desarrollada para el curso de React en CoderHouse
 
 Para visitar el proyecto en línea hacer click [aquí](https://marcodamianperez.github.io/proyecto-react-coderhouse/)
 
-![demo](https://i.imgur.com/OYB9tYT.gif)
+## :star2: Demo
+![demo](https://i.imgur.com/WU4zddC.gif)
