@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/proyecto-react-coderhouse/">
         <NavBar link1={"Más Vendidos"} link2={"Novedades"} />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />

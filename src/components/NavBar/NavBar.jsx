@@ -17,7 +17,7 @@ const NavBar = ({ link1, link2 }) => {
       {/* Utilizo <span> para los links porque el profe mencionó que
         en react no se usan las etiquetas <a> para enlaces internos */}
       <Link to={"/"} className="navbar__brand">
-        <img src="/logo.png" alt="logo" />
+        <img src="/proyecto-react-coderhouse/logo.png" alt="logo" />
       </Link>
       <div className="hamburger" id="hamburger" onClick={open}>
         <div className="hamburger__line hamburger__line--1"></div>
