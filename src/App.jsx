@@ -1,13 +1,24 @@
-import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <NavBar link1={'Más Vendidos'} link2={'Novedades'} link3={'Ver Todo'}/>
-      <ItemListContainer greeting={'Bienvenido a tu librería Online'} />
+      <BrowserRouter>
+        <NavBar link1={"Más Vendidos"} link2={"Novedades"} />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route
+            path="/categoria/:idCategoria"
+            element={<ItemListContainer />}
+          />
+          <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

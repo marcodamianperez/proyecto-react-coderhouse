@@ -1,40 +1,34 @@
 .btn {
-    background-color: transparent;
-    border: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    letter-spacing: 1px;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
 
-    @include respond(phone-land) {
-        font-size: 1.4rem;
+  @include respond(phone-land) {
+    font-size: 1.2rem;
+  }
+
+  @include respond(tablet-land) {
+    font-size: 1rem;
+  }
+
+  & > i {
+    color: $color-blue;
+    font-size: 2rem;
+  }
+
+  &__solid {
+    background-color: $color-blue;
+    color: $color-white;
+    text-align: center;
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: darken($color-blue, 10%);
     }
-
-    & > i {
-        color: $color-blue;
-        font-size: 2rem;
-    }
-
-    &__solid {
-        background-color: $color-blue;
-        color: $color-white;
-        display: inline-block;
-        border-radius: 1rem;
-        padding: 1rem 2rem;
-        width: 100%;
-        transition: background-color .2s;
-
-        &:hover {
-            background-color: darken($color-blue, 10%);
-        }
-
-        &--small {
-            padding: .7rem 1rem;
-            font-size: 1rem;
-            letter-spacing: normal;
-
-            @include respond(phone-land) {
-                font-size: 1.2rem;
-            }
-        }
-    }
+  }
 }

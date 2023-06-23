@@ -1,0 +1,104 @@
+.book {
+  padding: 3rem 0;
+  display: grid;
+  gap: 2rem;
+  color: $color-grey-medium-2;
+
+  @include respond(tablet-land) {
+    grid-template-columns: 1fr 40%;
+    grid-template-areas:
+      "image  header"
+      "info info";
+  }
+
+  &__img {
+    background-color: $color-grey-light;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    @include respond(tablet-land) {
+      grid-area: image;
+    }
+
+    &-container {
+      border-radius: 1rem;
+      overflow: hidden;
+      max-width: 20rem;
+      margin-inline: auto;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__header {
+    background-color: $color-grey-light;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+
+    @include respond(tablet-land) {
+      grid-area: header;
+    }
+
+    &-title {
+      font-size: 2rem;
+    }
+
+    &-author {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &-price {
+      margin-top: 1rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__info {
+    background-color: $color-grey-light;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include respond(tablet-land) {
+      grid-area: info;
+    }
+
+    &-title {
+      font-size: 1.8rem;
+    }
+
+    &-sinopsis {
+      font-size: 1.4rem;
+      line-height: 1.6;
+
+      @include respond(tablet-land) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &-table {
+      font-size: 1.2rem;
+
+      @include respond(tablet-land) {
+        font-size: 1rem;
+      }
+
+      td {
+        padding: 0.3rem 0;
+        width: 50%;
+      }
+    }
+  }
+}
