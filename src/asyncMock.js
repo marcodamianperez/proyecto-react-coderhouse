@@ -1,7 +1,7 @@
 const books = [
   {
     id: "1",
-    idCat: "1",
+    idCat: "masVendidos",
     stock: 7,
     name: "El Gato Negro",
     author: "E. Allan Poe",
@@ -15,7 +15,7 @@ const books = [
   },
   {
     id: "2",
-    idCat: "2",
+    idCat: "novedades",
     stock: 6,
     name: "El Wendigo",
     author: "Algernon Blackwood",
@@ -29,7 +29,7 @@ const books = [
   },
   {
     id: "3",
-    idCat: "1",
+    idCat: "masVendidos",
     stock: 4,
     name: "La rebelión de Atlas",
     author: "Ayn Rand",
@@ -43,7 +43,7 @@ const books = [
   },
   {
     id: "4",
-    idCat: "2",
+    idCat: "novedades",
     stock: 9,
     name: "Cosmos",
     author: "Carl Sagan",
@@ -57,7 +57,7 @@ const books = [
   },
   {
     id: "5",
-    idCat: "1",
+    idCat: "masVendidos",
     stock: 12,
     name: "El arte de la guerra",
     author: "Sun Tzu",
@@ -71,7 +71,7 @@ const books = [
   },
   {
     id: "6",
-    idCat: "2",
+    idCat: "novedades",
     stock: 0,
     name: "El sabueso de los Baskerville",
     author: "Arthur Conan Doyle",

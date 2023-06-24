@@ -27,12 +27,12 @@ const NavBar = ({ link1, link2 }) => {
 
       <ul className="navbar__items" id="navbar-items">
         <li className="navbar__item">
-          <NavLink to={"/categoria/1"} className="navbar__link">
+          <NavLink to={"/categoria/masVendidos"} className="navbar__link">
             {link1}
           </NavLink>
         </li>
         <li className="navbar__item">
-          <NavLink to={"/categoria/2"} className="navbar__link">
+          <NavLink to={"/categoria/novedades"} className="navbar__link">
             {link2}
           </NavLink>
         </li>
